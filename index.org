@@ -1,4 +1,5 @@
 #+title: leocavalcante.org
 #+author: leocavalcante
 
-* Hello, World!
+* Emacs presentation (pt-BR)
+[[file:hello-emacs.org]]
