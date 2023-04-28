@@ -2,5 +2,11 @@
 
 * TODO O que é o Emacs?
 * TODO Frames, Windows & Buffers
-* TODO Major mode & minor mode
+* TODO Major mode & Minor mode
 * Showtime
+** TODO org-mode
+** TODO php-mode
+** TODO lsp-mode
+** TODO company-mode
+** TODO treemacs
+** TODO magit
