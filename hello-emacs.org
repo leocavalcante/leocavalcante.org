@@ -5,6 +5,7 @@
 * TODO Major mode & Minor mode
 * Showtime
 ** TODO org-mode
+** TODO emacs-lisp
 ** TODO php-mode
 ** TODO lsp-mode
 ** TODO company-mode
