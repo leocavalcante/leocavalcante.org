@@ -1,3 +1,4 @@
+#+setupfile: theme.org
 #+title: Hello, Emacs!
 
 * TODO O que é o Emacs?

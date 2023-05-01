@@ -2,7 +2,8 @@
 
 (setq org-publish-project-alist
       '(("leocavalcante.org"
-	:base-directory "./"
-	:publishing-directory "./docs")))
+	 :base-directory "./"
+	 :exclude "README.org\\|theme\.org"
+	 :publishing-directory "./docs")))
 
 (org-publish "leocavalcante.org" t)

@@ -1,4 +1,4 @@
-#+SETUPFILE: stylish-white.theme
+#+setupfile: theme.org
 #+title: leocavalcante.org
 #+author: leocavalcante
 
