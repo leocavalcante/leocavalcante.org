@@ -1,9 +1,16 @@
-default: clean
-	emacs --script build.el
+default: clean build open srv
 
 .PHONY: clean
 clean:
 	rm -rf docs/*.html
+
+.PHONY: build
+build:
+	emacs --script build.el
+
+.PHONY: open
+open:
+	open http://localhost:8080
 
 .PHONY: srv
 srv:

@@ -1,6 +1,14 @@
 #+setupfile: theme.org
 #+title: leocavalcante.org
 #+author: leocavalcante
+#+options: toc:nil
+
+Visit the source at [[https://github.com/leocavalcante/leocavalcante.org][github.com/leocavalcante/leocavalcante.org]]
+
+#+toc: headlines 2
 
 * Emacs presentation (pt-BR)
-[[file:hello-emacs.org]]
+
+I naive talk introducing a little bit about Emacs.
+
+[[file:hello-emacs.org][Hello Emacs.org]]
