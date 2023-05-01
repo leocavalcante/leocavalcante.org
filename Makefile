@@ -3,4 +3,4 @@ default: clean
 
 .PHONY: clean
 clean:
-	rm -rf docs/
+	rm -rf docs/*.html
