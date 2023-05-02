@@ -10,5 +10,6 @@
 ** TODO php-mode
 ** TODO lsp-mode
 ** TODO company-mode
-** TODO treemacs
 ** TODO magit
+** TODO treemacs
+** TODO lsp-treemacs
