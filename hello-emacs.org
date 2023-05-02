@@ -1,42 +1,88 @@
+
 #+setupfile: theme.org
 #+title: Hello, Emacs!
 
 * O que é o Emacs?
 
-Emacs é uma família de editores popularmente conhecida pela sua extensibilidade.
+ + Emacs é uma *família de editores* popularmente conhecida pela sua
+   *extensibilidade*.
 
-O *GNU Emacs* é a variação mais conhecida e adotada.
+ + O *GNU Emacs* é a variação mais conhecida e adotada.
 
-O Emacs começou a ser desenvolvido em meados dos anos 70 no labotório de interligência artificial do MIT.
+ + O Emacs começou a ser desenvolvido em meados dos anos 70 no
+   labotório de interligência artificial do MIT.
+   
+ + Já o GNU Emacs, começou a ser desenvolvido em 1984 pelo Richard
+   Stallman, como uma alternativa livre ao Gosling Emacs (do James
+   Gosling, pai do Java) que era proprietário.
 
-Já o GNU Emacs começou a ser desenvolvido em 1984 pelo Richard Stallman, como uma alternativa livre ao Gosling Emacs (do James Gosling, pai do Java) que era proprietário.
+ + Outras variações populares: XEmacs e SXEmacs.
 
-Variantes: XEmacs e SXEmacs.
+* Frames, Windows & Buffers
 
-* TODO Frames, Windows & Buffers
+** Frame
 
-* TODO Major mode & Minor mode
+ + É uma representação visual do agrupamento de janelas (Windows).
+
+ + Um Frame pode ter uma ou mais janelas.
+
+** Window
+
+ + É onde um Buffer é trabalhado.
+
+ + Comparado com outros editores, visualmente a Window é como se fosse
+   um painel.
+
+** Buffer
+
+ + É a representação do texto na memória do Emacs.
+
+ + É o contexto onde um texto é manipulado.
+
+* Major mode & Minor mode
+
+** Major
+
+ + É o como o Emacs se especializa com recursos para edição de texto
+   (Buffer).
+
+ + Cada Buffer pode ter apenas um /Major mode/ ativo por vez.
+
+** Minor
+
+ + São modos opcionais que alteram características específicas na
+   edição de texto.
+
+ + Os buffers podem ter zero ou mais /Minor modes/ ativos por vez.
 
 * Showtime
 
 ** org-mode
-+ Headings & sub-headings
-+ Listas
-+ Tabelas
+
+ + Headings & sub-headings
+
+ + Listas
+
+ + Tabelas
 
 **** emacs-lisp
-
-#+begin_src emacs-lisp
-(print "Hello, World!")
-#+end_src
+  #+begin_src emacs-lisp
+ (print "Hello, World!")
+ #+end_src
 
 #+RESULTS:
 : Hello, World!
+
 ** TODO php-mode
+
 ** TODO lsp-mode
+
 ** TODO company-mode
+
 ** TODO magit
+
 ** TODO treemacs
+
 ** TODO lsp-treemacs
 
 * Referências
