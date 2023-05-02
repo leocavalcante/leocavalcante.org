@@ -22,3 +22,6 @@ deploy:
 	git commit -m ":rocket: deploy"
 	git push
 	gh repo view --web
+
+.PHONY: publish
+publish: clean build deploy
