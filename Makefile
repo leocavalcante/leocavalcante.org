@@ -15,3 +15,10 @@ open:
 .PHONY: srv
 srv:
 	php -S localhost:8080 -t docs
+
+.PHONY: deploy
+deploy:
+	git add docs
+	git commit -m ":rocket: deploy"
+	git push
+	gh repo view --web
