@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2023-05-02 Tue 00:07 -->
+<!-- 2023-05-02 Tue 11:56 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Hello, Emacs!</title>
@@ -205,8 +205,19 @@
 <div id="text-table-of-contents" role="doc-toc">
 <ul>
 <li><a href="#orgb156591">1. O que é o Emacs?</a></li>
-<li><a href="#org6c70e83">2. <span class="todo TODO">TODO</span> Frames, Windows &amp; Buffers</a></li>
-<li><a href="#orgbd9af5e">3. <span class="todo TODO">TODO</span> Major mode &amp; Minor mode</a></li>
+<li><a href="#org6c70e83">2. Frames, Windows &amp; Buffers</a>
+<ul>
+<li><a href="#org30a4efd">2.1. Frame</a></li>
+<li><a href="#orgcec7888">2.2. Window</a></li>
+<li><a href="#org2b42f28">2.3. Buffer</a></li>
+</ul>
+</li>
+<li><a href="#orgbd9af5e">3. Major mode &amp; Minor mode</a>
+<ul>
+<li><a href="#org06f30bd">3.1. Major</a></li>
+<li><a href="#orgffc50ca">3.2. Minor</a></li>
+</ul>
+</li>
 <li><a href="#org58d9f55">4. Showtime</a>
 <ul>
 <li><a href="#orgf7ccd81">4.1. org-mode</a></li>
@@ -226,34 +237,90 @@
 <div id="outline-container-orgb156591" class="outline-2">
 <h2 id="orgb156591"><span class="section-number-2">1.</span> O que é o Emacs?</h2>
 <div class="outline-text-2" id="text-1">
-<p>
-Emacs é uma família de editores popularmente conhecida pela sua extensibilidade.
-</p>
+<ul class="org-ul">
+<li>Emacs é uma <b>família de editores</b> popularmente conhecida pela sua
+<b>extensibilidade</b>.</li>
 
-<p>
-O <b>GNU Emacs</b> é a variação mais conhecida e adotada.
-</p>
+<li>O <b>GNU Emacs</b> é a variação mais conhecida e adotada.</li>
 
-<p>
-O Emacs começou a ser desenvolvido em meados dos anos 70 no labotório de interligência artificial do MIT.
-</p>
+<li>O Emacs começou a ser desenvolvido em meados dos anos 70 no
+labotório de interligência artificial do MIT.</li>
 
-<p>
-Já o GNU Emacs começou a ser desenvolvido em 1984 pelo Richard Stallman, como uma alternativa livre ao Gosling Emacs (do James Gosling, pai do Java) que era proprietário.
-</p>
+<li>Já o GNU Emacs, começou a ser desenvolvido em 1984 pelo Richard
+Stallman, como uma alternativa livre ao Gosling Emacs (do James
+Gosling, pai do Java) que era proprietário.</li>
 
-<p>
-Variantes: XEmacs e SXEmacs.
-</p>
+<li>Outras variações populares: XEmacs e SXEmacs.</li>
+</ul>
 </div>
 </div>
 
 <div id="outline-container-org6c70e83" class="outline-2">
-<h2 id="org6c70e83"><span class="section-number-2">2.</span> <span class="todo TODO">TODO</span> Frames, Windows &amp; Buffers</h2>
+<h2 id="org6c70e83"><span class="section-number-2">2.</span> Frames, Windows &amp; Buffers</h2>
+<div class="outline-text-2" id="text-2">
+</div>
+<div id="outline-container-org30a4efd" class="outline-3">
+<h3 id="org30a4efd"><span class="section-number-3">2.1.</span> Frame</h3>
+<div class="outline-text-3" id="text-2-1">
+<ul class="org-ul">
+<li>É uma representação visual do agrupamento de janelas (Windows).</li>
+
+<li>Um Frame pode ter uma ou mais janelas.</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orgcec7888" class="outline-3">
+<h3 id="orgcec7888"><span class="section-number-3">2.2.</span> Window</h3>
+<div class="outline-text-3" id="text-2-2">
+<ul class="org-ul">
+<li>É onde um Buffer é trabalhado.</li>
+
+<li>Comparado com outros editores, visualmente a Window é como se fosse
+um painel.</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org2b42f28" class="outline-3">
+<h3 id="org2b42f28"><span class="section-number-3">2.3.</span> Buffer</h3>
+<div class="outline-text-3" id="text-2-3">
+<ul class="org-ul">
+<li>É a representação do texto na memória do Emacs.</li>
+
+<li>É o contexto onde um texto é manipulado.</li>
+</ul>
+</div>
+</div>
 </div>
 
 <div id="outline-container-orgbd9af5e" class="outline-2">
-<h2 id="orgbd9af5e"><span class="section-number-2">3.</span> <span class="todo TODO">TODO</span> Major mode &amp; Minor mode</h2>
+<h2 id="orgbd9af5e"><span class="section-number-2">3.</span> Major mode &amp; Minor mode</h2>
+<div class="outline-text-2" id="text-3">
+</div>
+<div id="outline-container-org06f30bd" class="outline-3">
+<h3 id="org06f30bd"><span class="section-number-3">3.1.</span> Major</h3>
+<div class="outline-text-3" id="text-3-1">
+<ul class="org-ul">
+<li>É o como o Emacs se especializa com recursos para edição de texto
+(Buffer).</li>
+
+<li>Cada Buffer pode ter apenas um <i>Major mode</i> ativo por vez.</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orgffc50ca" class="outline-3">
+<h3 id="orgffc50ca"><span class="section-number-3">3.2.</span> Minor</h3>
+<div class="outline-text-3" id="text-3-2">
+<ul class="org-ul">
+<li>São modos opcionais que alteram características específicas na
+edição de texto.</li>
+
+<li>Os buffers podem ter zero ou mais <i>Minor modes</i> ativos por vez.</li>
+</ul>
+</div>
+</div>
 </div>
 
 <div id="outline-container-org58d9f55" class="outline-2">
@@ -265,7 +332,9 @@ Variantes: XEmacs e SXEmacs.
 <div class="outline-text-3" id="text-4-1">
 <ul class="org-ul">
 <li>Headings &amp; sub-headings</li>
+
 <li>Listas</li>
+
 <li>Tabelas</li>
 </ul>
 </div>
@@ -281,21 +350,27 @@ Variantes: XEmacs e SXEmacs.
 </li>
 </ol>
 </div>
+
 <div id="outline-container-org278b212" class="outline-3">
 <h3 id="org278b212"><span class="section-number-3">4.2.</span> <span class="todo TODO">TODO</span> php-mode</h3>
 </div>
+
 <div id="outline-container-orgaf471e4" class="outline-3">
 <h3 id="orgaf471e4"><span class="section-number-3">4.3.</span> <span class="todo TODO">TODO</span> lsp-mode</h3>
 </div>
+
 <div id="outline-container-orgab7f2f1" class="outline-3">
 <h3 id="orgab7f2f1"><span class="section-number-3">4.4.</span> <span class="todo TODO">TODO</span> company-mode</h3>
 </div>
+
 <div id="outline-container-org0c04b77" class="outline-3">
 <h3 id="org0c04b77"><span class="section-number-3">4.5.</span> <span class="todo TODO">TODO</span> magit</h3>
 </div>
+
 <div id="outline-container-org7988d32" class="outline-3">
 <h3 id="org7988d32"><span class="section-number-3">4.6.</span> <span class="todo TODO">TODO</span> treemacs</h3>
 </div>
+
 <div id="outline-container-orge3d7dc6" class="outline-3">
 <h3 id="orge3d7dc6"><span class="section-number-3">4.7.</span> <span class="todo TODO">TODO</span> lsp-treemacs</h3>
 </div>
@@ -316,7 +391,7 @@ Variantes: XEmacs e SXEmacs.
 </div>
 <div id="postamble" class="status">
 <p class="author">Author: Leo Cavalcante</p>
-<p class="date">Created: 2023-05-02 Tue 00:07</p>
+<p class="date">Created: 2023-05-02 Tue 11:56</p>
 <p class="validation"><a href="https://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>
