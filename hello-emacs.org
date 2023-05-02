@@ -1,15 +1,48 @@
 #+setupfile: theme.org
 #+title: Hello, Emacs!
 
-* TODO O que é o Emacs?
+* O que é o Emacs?
+
+Emacs é uma família de editores popularmente conhecida pela sua extensibilidade.
+
+O *GNU Emacs* é a variação mais conhecida e adotada.
+
+O Emacs começou a ser desenvolvido em meados dos anos 70 no labotório de interligência artificial do MIT.
+
+Já o GNU Emacs começou a ser desenvolvido em 1984 pelo Richard Stallman, como uma alternativa livre ao Gosling Emacs (do James Gosling, pai do Java) que era proprietário.
+
+Variantes: XEmacs e SXEmacs.
+
 * TODO Frames, Windows & Buffers
+
 * TODO Major mode & Minor mode
+
 * Showtime
-** TODO org-mode
-** TODO emacs-lisp
+
+** org-mode
++ Headings & sub-headings
++ Listas
++ Tabelas
+
+**** emacs-lisp
+
+#+begin_src emacs-lisp
+(print "Hello, World!")
+#+end_src
+
+#+RESULTS:
+: Hello, World!
 ** TODO php-mode
 ** TODO lsp-mode
 ** TODO company-mode
 ** TODO magit
 ** TODO treemacs
 ** TODO lsp-treemacs
+
+* Referências
+
++ [[https://www.gnu.org/software/emacs/][GNU Emacs]]
++ [[https://www.youtube.com/@SystemCrafters][System Crafters]]
++ [[https://www.youtube.com/@debxp][Blau Araújo (@dbexp)]]
++ [[https://www.youtube.com/@DistroTube][DistroTube]]
++ [[https://www.youtube.com/@Dunossauro][Dunossauro]]
