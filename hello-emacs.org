@@ -18,6 +18,17 @@
 
  + Outras variações populares: XEmacs e SXEmacs.
 
+* Domine suas ferramentas
+
+#+begin_quote
+We’ve talked before about tools being an extension of your hand.
+Well, this applies to editors more than to any other software tool.
+You need to be able to manipulate text as effortlessly as possible,
+because text is the basic raw material of programming.
+#+end_quote
+—Pragmatic Programmer
+
+
 * Frames, Windows & Buffers
 
 ** Frame
@@ -65,10 +76,9 @@
 
  + Tabelas
 
-**** emacs-lisp
-  #+begin_src emacs-lisp
- (print "Hello, World!")
- #+end_src
+** emacs-lisp
+
++ Primeiras edições no =init.el=
 
 #+RESULTS:
 : Hello, World!

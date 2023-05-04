@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2023-05-02 Tue 11:56 -->
+<!-- 2023-05-03 Wed 21:27 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Hello, Emacs!</title>
@@ -205,31 +205,33 @@
 <div id="text-table-of-contents" role="doc-toc">
 <ul>
 <li><a href="#orgb156591">1. O que é o Emacs?</a></li>
-<li><a href="#org6c70e83">2. Frames, Windows &amp; Buffers</a>
+<li><a href="#org0cd6e7d">2. Domine suas ferramentas</a></li>
+<li><a href="#org6c70e83">3. Frames, Windows &amp; Buffers</a>
 <ul>
-<li><a href="#org30a4efd">2.1. Frame</a></li>
-<li><a href="#orgcec7888">2.2. Window</a></li>
-<li><a href="#org2b42f28">2.3. Buffer</a></li>
+<li><a href="#org30a4efd">3.1. Frame</a></li>
+<li><a href="#orgcec7888">3.2. Window</a></li>
+<li><a href="#org2b42f28">3.3. Buffer</a></li>
 </ul>
 </li>
-<li><a href="#orgbd9af5e">3. Major mode &amp; Minor mode</a>
+<li><a href="#orgbd9af5e">4. Major mode &amp; Minor mode</a>
 <ul>
-<li><a href="#org06f30bd">3.1. Major</a></li>
-<li><a href="#orgffc50ca">3.2. Minor</a></li>
+<li><a href="#org06f30bd">4.1. Major</a></li>
+<li><a href="#orgffc50ca">4.2. Minor</a></li>
 </ul>
 </li>
-<li><a href="#org58d9f55">4. Showtime</a>
+<li><a href="#org58d9f55">5. Showtime</a>
 <ul>
-<li><a href="#orgf7ccd81">4.1. org-mode</a></li>
-<li><a href="#org278b212">4.2. <span class="todo TODO">TODO</span> php-mode</a></li>
-<li><a href="#orgaf471e4">4.3. <span class="todo TODO">TODO</span> lsp-mode</a></li>
-<li><a href="#orgab7f2f1">4.4. <span class="todo TODO">TODO</span> company-mode</a></li>
-<li><a href="#org0c04b77">4.5. <span class="todo TODO">TODO</span> magit</a></li>
-<li><a href="#org7988d32">4.6. <span class="todo TODO">TODO</span> treemacs</a></li>
-<li><a href="#orge3d7dc6">4.7. <span class="todo TODO">TODO</span> lsp-treemacs</a></li>
+<li><a href="#orgf7ccd81">5.1. org-mode</a></li>
+<li><a href="#orgaf64b25">5.2. emacs-lisp</a></li>
+<li><a href="#org278b212">5.3. <span class="todo TODO">TODO</span> php-mode</a></li>
+<li><a href="#orgaf471e4">5.4. <span class="todo TODO">TODO</span> lsp-mode</a></li>
+<li><a href="#orgab7f2f1">5.5. <span class="todo TODO">TODO</span> company-mode</a></li>
+<li><a href="#org0c04b77">5.6. <span class="todo TODO">TODO</span> magit</a></li>
+<li><a href="#org7988d32">5.7. <span class="todo TODO">TODO</span> treemacs</a></li>
+<li><a href="#orge3d7dc6">5.8. <span class="todo TODO">TODO</span> lsp-treemacs</a></li>
 </ul>
 </li>
-<li><a href="#org77a1cd7">5. Referências</a></li>
+<li><a href="#org77a1cd7">6. Referências</a></li>
 </ul>
 </div>
 </div>
@@ -255,13 +257,31 @@ Gosling, pai do Java) que era proprietário.</li>
 </div>
 </div>
 
-<div id="outline-container-org6c70e83" class="outline-2">
-<h2 id="org6c70e83"><span class="section-number-2">2.</span> Frames, Windows &amp; Buffers</h2>
+<div id="outline-container-org0cd6e7d" class="outline-2">
+<h2 id="org0cd6e7d"><span class="section-number-2">2.</span> Domine suas ferramentas</h2>
 <div class="outline-text-2" id="text-2">
+<blockquote>
+<p>
+We’ve talked before about tools being an extension of your hand.
+Well, this applies to editors more than to any other software tool.
+You need to be able to manipulate text as effortlessly as possible,
+because text is the basic raw material of programming.
+</p>
+</blockquote>
+<p>
+—Pragmatic Programmer
+</p>
+</div>
+</div>
+
+
+<div id="outline-container-org6c70e83" class="outline-2">
+<h2 id="org6c70e83"><span class="section-number-2">3.</span> Frames, Windows &amp; Buffers</h2>
+<div class="outline-text-2" id="text-3">
 </div>
 <div id="outline-container-org30a4efd" class="outline-3">
-<h3 id="org30a4efd"><span class="section-number-3">2.1.</span> Frame</h3>
-<div class="outline-text-3" id="text-2-1">
+<h3 id="org30a4efd"><span class="section-number-3">3.1.</span> Frame</h3>
+<div class="outline-text-3" id="text-3-1">
 <ul class="org-ul">
 <li>É uma representação visual do agrupamento de janelas (Windows).</li>
 
@@ -271,8 +291,8 @@ Gosling, pai do Java) que era proprietário.</li>
 </div>
 
 <div id="outline-container-orgcec7888" class="outline-3">
-<h3 id="orgcec7888"><span class="section-number-3">2.2.</span> Window</h3>
-<div class="outline-text-3" id="text-2-2">
+<h3 id="orgcec7888"><span class="section-number-3">3.2.</span> Window</h3>
+<div class="outline-text-3" id="text-3-2">
 <ul class="org-ul">
 <li>É onde um Buffer é trabalhado.</li>
 
@@ -283,8 +303,8 @@ um painel.</li>
 </div>
 
 <div id="outline-container-org2b42f28" class="outline-3">
-<h3 id="org2b42f28"><span class="section-number-3">2.3.</span> Buffer</h3>
-<div class="outline-text-3" id="text-2-3">
+<h3 id="org2b42f28"><span class="section-number-3">3.3.</span> Buffer</h3>
+<div class="outline-text-3" id="text-3-3">
 <ul class="org-ul">
 <li>É a representação do texto na memória do Emacs.</li>
 
@@ -295,12 +315,12 @@ um painel.</li>
 </div>
 
 <div id="outline-container-orgbd9af5e" class="outline-2">
-<h2 id="orgbd9af5e"><span class="section-number-2">3.</span> Major mode &amp; Minor mode</h2>
-<div class="outline-text-2" id="text-3">
+<h2 id="orgbd9af5e"><span class="section-number-2">4.</span> Major mode &amp; Minor mode</h2>
+<div class="outline-text-2" id="text-4">
 </div>
 <div id="outline-container-org06f30bd" class="outline-3">
-<h3 id="org06f30bd"><span class="section-number-3">3.1.</span> Major</h3>
-<div class="outline-text-3" id="text-3-1">
+<h3 id="org06f30bd"><span class="section-number-3">4.1.</span> Major</h3>
+<div class="outline-text-3" id="text-4-1">
 <ul class="org-ul">
 <li>É o como o Emacs se especializa com recursos para edição de texto
 (Buffer).</li>
@@ -311,8 +331,8 @@ um painel.</li>
 </div>
 
 <div id="outline-container-orgffc50ca" class="outline-3">
-<h3 id="orgffc50ca"><span class="section-number-3">3.2.</span> Minor</h3>
-<div class="outline-text-3" id="text-3-2">
+<h3 id="orgffc50ca"><span class="section-number-3">4.2.</span> Minor</h3>
+<div class="outline-text-3" id="text-4-2">
 <ul class="org-ul">
 <li>São modos opcionais que alteram características específicas na
 edição de texto.</li>
@@ -324,12 +344,12 @@ edição de texto.</li>
 </div>
 
 <div id="outline-container-org58d9f55" class="outline-2">
-<h2 id="org58d9f55"><span class="section-number-2">4.</span> Showtime</h2>
-<div class="outline-text-2" id="text-4">
+<h2 id="org58d9f55"><span class="section-number-2">5.</span> Showtime</h2>
+<div class="outline-text-2" id="text-5">
 </div>
 <div id="outline-container-orgf7ccd81" class="outline-3">
-<h3 id="orgf7ccd81"><span class="section-number-3">4.1.</span> org-mode</h3>
-<div class="outline-text-3" id="text-4-1">
+<h3 id="orgf7ccd81"><span class="section-number-3">5.1.</span> org-mode</h3>
+<div class="outline-text-3" id="text-5-1">
 <ul class="org-ul">
 <li>Headings &amp; sub-headings</li>
 
@@ -338,47 +358,49 @@ edição de texto.</li>
 <li>Tabelas</li>
 </ul>
 </div>
+</div>
 
-<ol class="org-ol">
-<li><a id="orgaf64b25"></a>emacs-lisp<br />
-<div class="outline-text-5" id="text-4-1-0-1">
-<div class="org-src-container">
-<pre class="src src-emacs-lisp">(print "Hello, World!")
+<div id="outline-container-orgaf64b25" class="outline-3">
+<h3 id="orgaf64b25"><span class="section-number-3">5.2.</span> emacs-lisp</h3>
+<div class="outline-text-3" id="text-5-2">
+<ul class="org-ul">
+<li>Primeiras edições no <code>init.el</code></li>
+</ul>
+
+<pre class="example">
+Hello, World!
 </pre>
 </div>
 </div>
-</li>
-</ol>
-</div>
 
 <div id="outline-container-org278b212" class="outline-3">
-<h3 id="org278b212"><span class="section-number-3">4.2.</span> <span class="todo TODO">TODO</span> php-mode</h3>
+<h3 id="org278b212"><span class="section-number-3">5.3.</span> <span class="todo TODO">TODO</span> php-mode</h3>
 </div>
 
 <div id="outline-container-orgaf471e4" class="outline-3">
-<h3 id="orgaf471e4"><span class="section-number-3">4.3.</span> <span class="todo TODO">TODO</span> lsp-mode</h3>
+<h3 id="orgaf471e4"><span class="section-number-3">5.4.</span> <span class="todo TODO">TODO</span> lsp-mode</h3>
 </div>
 
 <div id="outline-container-orgab7f2f1" class="outline-3">
-<h3 id="orgab7f2f1"><span class="section-number-3">4.4.</span> <span class="todo TODO">TODO</span> company-mode</h3>
+<h3 id="orgab7f2f1"><span class="section-number-3">5.5.</span> <span class="todo TODO">TODO</span> company-mode</h3>
 </div>
 
 <div id="outline-container-org0c04b77" class="outline-3">
-<h3 id="org0c04b77"><span class="section-number-3">4.5.</span> <span class="todo TODO">TODO</span> magit</h3>
+<h3 id="org0c04b77"><span class="section-number-3">5.6.</span> <span class="todo TODO">TODO</span> magit</h3>
 </div>
 
 <div id="outline-container-org7988d32" class="outline-3">
-<h3 id="org7988d32"><span class="section-number-3">4.6.</span> <span class="todo TODO">TODO</span> treemacs</h3>
+<h3 id="org7988d32"><span class="section-number-3">5.7.</span> <span class="todo TODO">TODO</span> treemacs</h3>
 </div>
 
 <div id="outline-container-orge3d7dc6" class="outline-3">
-<h3 id="orge3d7dc6"><span class="section-number-3">4.7.</span> <span class="todo TODO">TODO</span> lsp-treemacs</h3>
+<h3 id="orge3d7dc6"><span class="section-number-3">5.8.</span> <span class="todo TODO">TODO</span> lsp-treemacs</h3>
 </div>
 </div>
 
 <div id="outline-container-org77a1cd7" class="outline-2">
-<h2 id="org77a1cd7"><span class="section-number-2">5.</span> Referências</h2>
-<div class="outline-text-2" id="text-5">
+<h2 id="org77a1cd7"><span class="section-number-2">6.</span> Referências</h2>
+<div class="outline-text-2" id="text-6">
 <ul class="org-ul">
 <li><a href="https://www.gnu.org/software/emacs/">GNU Emacs</a></li>
 <li><a href="https://www.youtube.com/@SystemCrafters">System Crafters</a></li>
@@ -391,7 +413,7 @@ edição de texto.</li>
 </div>
 <div id="postamble" class="status">
 <p class="author">Author: Leo Cavalcante</p>
-<p class="date">Created: 2023-05-02 Tue 11:56</p>
+<p class="date">Created: 2023-05-03 Wed 21:27</p>
 <p class="validation"><a href="https://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>
