@@ -1,0 +1,24 @@
+#+title macOS
+
+* Cool defaults
+
+#+begin_src shell
+# Show Path in Finder:
+defaults write com.apple.finder _FXShowPosixPathInTitle -bool true; killall Finder
+
+# Sort folders first in Finder
+defaults write com.apple.finder _FXSortFoldersFirst -bool true; killall Finder
+
+# Always show scroll bars
+defaults write NSGlobalDomain AppleShowScrollBars -string "Always"; killall Finder
+
+# Show only active apps on the Dock
+defaults write com.apple.dock static-only -bool true; killall Dock
+
+# Single App Mode
+defaults write com.apple.dock single-app -bool true; killall Dock
+
+# Enable Key Repeat
+defaults write NSGlobalDomain ApplePressAndHoldEnabled -bool false
+#+end_src
+Source: https://www.youtube.com/watch?v=CGQXZKse0JU
