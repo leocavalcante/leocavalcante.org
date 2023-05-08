@@ -9,6 +9,8 @@ Visit the source at [[https://github.com/leocavalcante/leocavalcante.org][github
 
 * Emacs presentation (pt-BR)
 
-I naive talk introducing a little bit about Emacs.
+I naive talk introducing a little bit about Emacs: [[file:hello-emacs.org][Hello Emacs.org]]
 
-[[file:hello-emacs.org][Hello Emacs.org]]
+* macOS
+
+[[file:macos.org][macOS]]
