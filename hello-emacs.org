@@ -102,7 +102,7 @@ Primeiras edições no =init.el=.
 
 ** php-mode
 
-Modo PHP.
+Modo de destaque de sintaxe para PHP.
 
 #+begin_src emacs-lisp
   (use-package php-mode
