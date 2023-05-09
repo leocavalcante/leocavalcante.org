@@ -131,6 +131,8 @@ Modo do Language Server Protocol.
 
 ** TODO magit
 
+Modo que adiciona funcionalidades do Git.
+
 ** treemacs
 
 Modo responsável por exibir a estrutura de diretórios.
