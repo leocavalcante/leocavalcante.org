@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2023-05-08 Mon 11:50 -->
+<!-- 2023-05-08 Mon 23:29 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Hello, Emacs!</title>
@@ -223,11 +223,11 @@
 <ul>
 <li><a href="#orgf7ccd81">5.1. org-mode</a></li>
 <li><a href="#orgaf64b25">5.2. emacs-lisp</a></li>
-<li><a href="#org278b212">5.3. <span class="todo TODO">TODO</span> php-mode</a></li>
-<li><a href="#orgaf471e4">5.4. <span class="todo TODO">TODO</span> lsp-mode</a></li>
-<li><a href="#orgab7f2f1">5.5. <span class="todo TODO">TODO</span> company-mode</a></li>
+<li><a href="#org278b212">5.3. php-mode</a></li>
+<li><a href="#orgab7f2f1">5.4. company-mode</a></li>
+<li><a href="#orgaf471e4">5.5. lsp-mode</a></li>
 <li><a href="#org0c04b77">5.6. <span class="todo TODO">TODO</span> magit</a></li>
-<li><a href="#org7988d32">5.7. <span class="todo TODO">TODO</span> treemacs</a></li>
+<li><a href="#org7988d32">5.7. treemacs</a></li>
 <li><a href="#orge3d7dc6">5.8. <span class="todo TODO">TODO</span> lsp-treemacs</a></li>
 </ul>
 </li>
@@ -235,6 +235,9 @@
 </ul>
 </div>
 </div>
+<p>
+(staf core pf)
+</p>
 
 <div id="outline-container-orgb156591" class="outline-2">
 <h2 id="orgb156591"><span class="section-number-2">1.</span> O que é o Emacs?</h2>
@@ -363,26 +366,75 @@ edição de texto.</li>
 <div id="outline-container-orgaf64b25" class="outline-3">
 <h3 id="orgaf64b25"><span class="section-number-3">5.2.</span> emacs-lisp</h3>
 <div class="outline-text-3" id="text-5-2">
-<ul class="org-ul">
-<li>Primeiras edições no <code>init.el</code></li>
-</ul>
+<p>
+Primeiras edições no <code>init.el</code>.
+</p>
 
-<pre class="example">
-Hello, World!
+<div class="org-src-container">
+<pre class="src src-emacs-lisp">(tool-bar-mode -1)
+(menu-bar-mode -1)
+(scroll-bar-mode -1)
+(global-display-line-numbers-mode t)
+(load-theme 'wombat t)
+(setq inhibit-startup-message t)
+
+(require 'package)
+(add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/") t)
+(package-initialize)
+
+(unless (package-installed-p 'use-package)
+  (package-install use-package))
+
 </pre>
+</div>
 </div>
 </div>
 
 <div id="outline-container-org278b212" class="outline-3">
-<h3 id="org278b212"><span class="section-number-3">5.3.</span> <span class="todo TODO">TODO</span> php-mode</h3>
-</div>
+<h3 id="org278b212"><span class="section-number-3">5.3.</span> php-mode</h3>
+<div class="outline-text-3" id="text-5-3">
+<p>
+Modo PHP.
+</p>
 
-<div id="outline-container-orgaf471e4" class="outline-3">
-<h3 id="orgaf471e4"><span class="section-number-3">5.4.</span> <span class="todo TODO">TODO</span> lsp-mode</h3>
+<div class="org-src-container">
+<pre class="src src-emacs-lisp">(use-package php-mode
+  :ensure t)
+</pre>
+</div>
+</div>
 </div>
 
 <div id="outline-container-orgab7f2f1" class="outline-3">
-<h3 id="orgab7f2f1"><span class="section-number-3">5.5.</span> <span class="todo TODO">TODO</span> company-mode</h3>
+<h3 id="orgab7f2f1"><span class="section-number-3">5.4.</span> company-mode</h3>
+<div class="outline-text-3" id="text-5-4">
+<p>
+Modo responsável por exibir o autocomplete.
+</p>
+
+<div class="org-src-container">
+<pre class="src src-emacs-lisp">(use-package company
+  :ensure t
+  :config (global-company-mode t))
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgaf471e4" class="outline-3">
+<h3 id="orgaf471e4"><span class="section-number-3">5.5.</span> lsp-mode</h3>
+<div class="outline-text-3" id="text-5-5">
+<p>
+Modo do Language Server Protocol.
+</p>
+
+<div class="org-src-container">
+<pre class="src src-emacs-lisp">(use-package lsp-mode
+  :ensure t
+  :hook (php-mode . lsp))
+</pre>
+</div>
+</div>
 </div>
 
 <div id="outline-container-org0c04b77" class="outline-3">
@@ -390,11 +442,30 @@ Hello, World!
 </div>
 
 <div id="outline-container-org7988d32" class="outline-3">
-<h3 id="org7988d32"><span class="section-number-3">5.7.</span> <span class="todo TODO">TODO</span> treemacs</h3>
+<h3 id="org7988d32"><span class="section-number-3">5.7.</span> treemacs</h3>
+<div class="outline-text-3" id="text-5-7">
+<p>
+Modo responsável por exibir a estrutura de diretórios.
+</p>
+
+<div class="org-src-container">
+<pre class="src src-emacs-lisp">(use-package treemacs
+  :ensure t)
+
+(use-package treemacs-all-the-icons
+  :ensure t)
+</pre>
+</div>
+</div>
 </div>
 
 <div id="outline-container-orge3d7dc6" class="outline-3">
 <h3 id="orge3d7dc6"><span class="section-number-3">5.8.</span> <span class="todo TODO">TODO</span> lsp-treemacs</h3>
+<div class="outline-text-3" id="text-5-8">
+<p>
+Modo que adiciona funcionalidades do LSP na exibição de estruturas.
+</p>
+</div>
 </div>
 </div>
 
@@ -413,7 +484,7 @@ Hello, World!
 </div>
 <div id="postamble" class="status">
 <p class="author">Author: Leo Cavalcante</p>
-<p class="date">Created: 2023-05-08 Mon 11:50</p>
+<p class="date">Created: 2023-05-08 Mon 23:29</p>
 <p class="validation"><a href="https://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>
