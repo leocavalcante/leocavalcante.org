@@ -91,6 +91,8 @@ Primeiras edições no =init.el=.
   (load-theme 'wombat t)
   (setq inhibit-startup-message t)
 
+  (set-face-attribute 'default nil :family "JetBrains Mono" :height 120 :weight 'light)
+
   (require 'package)
   (add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/") t)
   (package-initialize)
