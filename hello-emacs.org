@@ -1,6 +1,9 @@
 
 #+setupfile: theme.org
 #+title: Hello, Emacs!
+#+author: Leo Cavalcante
+
+ (staf core pf)
 
 * O que é o Emacs?
 
@@ -8,7 +11,7 @@
    *extensibilidade*.
 
  + O *GNU Emacs* é a variação mais conhecida e adotada.
-
+   
  + O Emacs começou a ser desenvolvido em meados dos anos 70 no
    labotório de interligência artificial do MIT.
    
@@ -78,22 +81,71 @@ because text is the basic raw material of programming.
 
 ** emacs-lisp
 
-+ Primeiras edições no =init.el=
+Primeiras edições no =init.el=.
 
-#+RESULTS:
-: Hello, World!
+  #+begin_src emacs-lisp
+  (tool-bar-mode -1)
+  (menu-bar-mode -1)
+  (scroll-bar-mode -1)
+  (global-display-line-numbers-mode t)
+  (load-theme 'wombat t)
+  (setq inhibit-startup-message t)
 
-** TODO php-mode
+  (require 'package)
+  (add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/") t)
+  (package-initialize)
 
-** TODO lsp-mode
+  (unless (package-installed-p 'use-package)
+    (package-install use-package))
 
-** TODO company-mode
+#+end_src
+
+** php-mode
+
+Modo PHP.
+
+#+begin_src emacs-lisp
+  (use-package php-mode
+    :ensure t)
+#+end_src
+
+** company-mode
+
+Modo responsável por exibir o autocomplete.
+
+  #+begin_src emacs-lisp
+  (use-package company
+    :ensure t
+    :config (global-company-mode t))
+#+end_src
+
+** lsp-mode
+
+Modo do Language Server Protocol.
+
+#+begin_src emacs-lisp
+  (use-package lsp-mode
+    :ensure t
+    :hook (php-mode . lsp))
+#+end_src
 
 ** TODO magit
 
-** TODO treemacs
+** treemacs
+
+Modo responsável por exibir a estrutura de diretórios.
+
+#+begin_src emacs-lisp
+  (use-package treemacs
+    :ensure t)
+
+  (use-package treemacs-all-the-icons
+    :ensure t)
+#+end_src
 
 ** TODO lsp-treemacs
+
+Modo que adiciona funcionalidades do LSP na exibição de estruturas.
 
 * Referências
 
