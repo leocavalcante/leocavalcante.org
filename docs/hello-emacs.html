@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2023-05-08 Mon 23:29 -->
+<!-- 2023-05-09 Tue 00:08 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Hello, Emacs!</title>
@@ -378,6 +378,8 @@ Primeiras edições no <code>init.el</code>.
 (load-theme 'wombat t)
 (setq inhibit-startup-message t)
 
+(set-face-attribute 'default nil :family "JetBrains Mono" :height 120 :weight 'light)
+
 (require 'package)
 (add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/") t)
 (package-initialize)
@@ -394,7 +396,7 @@ Primeiras edições no <code>init.el</code>.
 <h3 id="org278b212"><span class="section-number-3">5.3.</span> php-mode</h3>
 <div class="outline-text-3" id="text-5-3">
 <p>
-Modo PHP.
+Modo de destaque de sintaxe para PHP.
 </p>
 
 <div class="org-src-container">
@@ -439,6 +441,11 @@ Modo do Language Server Protocol.
 
 <div id="outline-container-org0c04b77" class="outline-3">
 <h3 id="org0c04b77"><span class="section-number-3">5.6.</span> <span class="todo TODO">TODO</span> magit</h3>
+<div class="outline-text-3" id="text-5-6">
+<p>
+Modo que adiciona funcionalidades do Git.
+</p>
+</div>
 </div>
 
 <div id="outline-container-org7988d32" class="outline-3">
@@ -484,7 +491,7 @@ Modo que adiciona funcionalidades do LSP na exibição de estruturas.
 </div>
 <div id="postamble" class="status">
 <p class="author">Author: Leo Cavalcante</p>
-<p class="date">Created: 2023-05-08 Mon 23:29</p>
+<p class="date">Created: 2023-05-09 Tue 00:08</p>
 <p class="validation"><a href="https://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>
