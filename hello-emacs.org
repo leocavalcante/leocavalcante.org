@@ -1,9 +1,8 @@
-
 #+setupfile: theme.org
 #+title: Hello, Emacs!
 #+author: Leo Cavalcante
 
- (staf core pf)
+ (staff core pf)
 
 * O que é o Emacs?
 
@@ -13,14 +12,18 @@
  + O *GNU Emacs* é a variação mais conhecida e adotada.
    
  + O Emacs começou a ser desenvolvido em meados dos anos 70 no
-   labotório de interligência artificial do MIT.
+   labotório de *interligência artificial* do MIT.
    
  + Já o GNU Emacs, começou a ser desenvolvido em 1984 pelo Richard
-   Stallman, como uma alternativa livre ao Gosling Emacs (do James
+   Stallman, como uma *alternativa livre* ao Gosling Emacs (do James
    Gosling, pai do Java) que era proprietário.
 
- + Outras variações populares: XEmacs e SXEmacs.
-
+ + Promoveu iniciativas como Copyleft, *software livre* e o projeto GNU,
+   que são os precursores de licenças open-source.
+ 
+ + Outras variações populares: XEmacs e SXEmacs. Não confundir com
+   Doom Emacs e Spacemascs que ainda são GNU Emacs.
+   
 * Domine suas ferramentas
 
 #+begin_quote
@@ -79,6 +82,11 @@ because text is the basic raw material of programming.
 
  + Tabelas
 
+ + Blocos de código 
+   #+begin_src emacs-lisp
+  (print "Hello, World!")
+#+end_src
+
 ** emacs-lisp
 
 Primeiras edições no =init.el=.
@@ -98,7 +106,7 @@ Primeiras edições no =init.el=.
   (package-initialize)
 
   (unless (package-installed-p 'use-package)
-    (package-install use-package))
+    (package-install 'use-package))
 
 #+end_src
 
@@ -131,9 +139,14 @@ Modo do Language Server Protocol.
     :hook (php-mode . lsp))
 #+end_src
 
-** TODO magit
+** magit
 
 Modo que adiciona funcionalidades do Git.
+
+#+begin_src emacs-lisp
+  (use-package magit
+    :ensure t)
+  #+end_src
 
 ** treemacs
 
@@ -147,9 +160,14 @@ Modo responsável por exibir a estrutura de diretórios.
     :ensure t)
 #+end_src
 
-** TODO lsp-treemacs
+** lsp-treemacs
 
 Modo que adiciona funcionalidades do LSP na exibição de estruturas.
+
+#+begin_src emacs-lisp
+  (use-package lsp-treemacs
+    :ensure t)
+#+end_src
 
 * Referências
 
