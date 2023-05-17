@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2023-05-09 Tue 00:13 -->
+<!-- 2023-05-16 Tue 21:28 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Hello, Emacs!</title>
@@ -226,9 +226,9 @@
 <li><a href="#org278b212">5.3. php-mode</a></li>
 <li><a href="#orgab7f2f1">5.4. company-mode</a></li>
 <li><a href="#orgaf471e4">5.5. lsp-mode</a></li>
-<li><a href="#org0c04b77">5.6. <span class="todo TODO">TODO</span> magit</a></li>
+<li><a href="#org0c04b77">5.6. magit</a></li>
 <li><a href="#org7988d32">5.7. treemacs</a></li>
-<li><a href="#orge3d7dc6">5.8. <span class="todo TODO">TODO</span> lsp-treemacs</a></li>
+<li><a href="#orge3d7dc6">5.8. lsp-treemacs</a></li>
 </ul>
 </li>
 <li><a href="#org77a1cd7">6. Referências</a></li>
@@ -236,7 +236,7 @@
 </div>
 </div>
 <p>
-(staf core pf)
+(staff core pf)
 </p>
 
 <div id="outline-container-orgb156591" class="outline-2">
@@ -249,13 +249,17 @@
 <li>O <b>GNU Emacs</b> é a variação mais conhecida e adotada.</li>
 
 <li>O Emacs começou a ser desenvolvido em meados dos anos 70 no
-labotório de interligência artificial do MIT.</li>
+labotório de <b>interligência artificial</b> do MIT.</li>
 
 <li>Já o GNU Emacs, começou a ser desenvolvido em 1984 pelo Richard
-Stallman, como uma alternativa livre ao Gosling Emacs (do James
+Stallman, como uma <b>alternativa livre</b> ao Gosling Emacs (do James
 Gosling, pai do Java) que era proprietário.</li>
 
-<li>Outras variações populares: XEmacs e SXEmacs.</li>
+<li>Promoveu iniciativas como Copyleft, <b>software livre</b> e o projeto GNU,
+que são os precursores de licenças open-source.</li>
+
+<li>Outras variações populares: XEmacs e SXEmacs. Não confundir com
+Doom Emacs e Spacemascs que ainda são GNU Emacs.</li>
 </ul>
 </div>
 </div>
@@ -359,6 +363,14 @@ edição de texto.</li>
 <li>Listas</li>
 
 <li>Tabelas</li>
+
+<li><p>
+Blocos de código 
+</p>
+<div class="org-src-container">
+<pre class="src src-emacs-lisp">(print "Hello, World!")
+</pre>
+</div></li>
 </ul>
 </div>
 </div>
@@ -385,7 +397,7 @@ Primeiras edições no <code>init.el</code>.
 (package-initialize)
 
 (unless (package-installed-p 'use-package)
-  (package-install use-package))
+  (package-install 'use-package))
 
 </pre>
 </div>
@@ -440,11 +452,17 @@ Modo do Language Server Protocol.
 </div>
 
 <div id="outline-container-org0c04b77" class="outline-3">
-<h3 id="org0c04b77"><span class="section-number-3">5.6.</span> <span class="todo TODO">TODO</span> magit</h3>
+<h3 id="org0c04b77"><span class="section-number-3">5.6.</span> magit</h3>
 <div class="outline-text-3" id="text-5-6">
 <p>
 Modo que adiciona funcionalidades do Git.
 </p>
+
+<div class="org-src-container">
+<pre class="src src-emacs-lisp">(use-package magit
+  :ensure t)
+</pre>
+</div>
 </div>
 </div>
 
@@ -467,11 +485,17 @@ Modo responsável por exibir a estrutura de diretórios.
 </div>
 
 <div id="outline-container-orge3d7dc6" class="outline-3">
-<h3 id="orge3d7dc6"><span class="section-number-3">5.8.</span> <span class="todo TODO">TODO</span> lsp-treemacs</h3>
+<h3 id="orge3d7dc6"><span class="section-number-3">5.8.</span> lsp-treemacs</h3>
 <div class="outline-text-3" id="text-5-8">
 <p>
 Modo que adiciona funcionalidades do LSP na exibição de estruturas.
 </p>
+
+<div class="org-src-container">
+<pre class="src src-emacs-lisp">(use-package lsp-treemacs
+  :ensure t)
+</pre>
+</div>
 </div>
 </div>
 </div>
@@ -491,7 +515,7 @@ Modo que adiciona funcionalidades do LSP na exibição de estruturas.
 </div>
 <div id="postamble" class="status">
 <p class="author">Author: Leo Cavalcante</p>
-<p class="date">Created: 2023-05-09 Tue 00:13</p>
+<p class="date">Created: 2023-05-16 Tue 21:28</p>
 <p class="validation"><a href="https://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>
