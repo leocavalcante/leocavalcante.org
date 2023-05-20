@@ -4,6 +4,16 @@
 
  (staff core pf)
 
+* Agenda
+
+ + Minibio do Emacs
+
+ + Porque dominar o Emacs
+
+ + Estrutura do Emacs
+
+ + Mão na massa 
+ 
 * O que é o Emacs?
 
  + Emacs é uma *família de editores* popularmente conhecida pela sua
@@ -11,8 +21,8 @@
 
  + O *GNU Emacs* é a variação mais conhecida e adotada.
    
- + O Emacs começou a ser desenvolvido em meados dos anos 70 no
-   labotório de *interligência artificial* do MIT.
+ + O "Emacs" (TECO) começou a ser desenvolvido em meados dos anos 70
+   no labotório de *interligência artificial* do MIT.
    
  + Já o GNU Emacs, começou a ser desenvolvido em 1984 pelo Richard
    Stallman, como uma *alternativa livre* ao Gosling Emacs (do James
@@ -23,6 +33,9 @@
  
  + Outras variações populares: XEmacs e SXEmacs. Não confundir com
    Doom Emacs e Spacemascs que ainda são GNU Emacs.
+
+ + Nos anos 90 o R. Stallman ganhou ou prêmio Grace Hopper pelo
+   trabalho dele com o Emacs.
    
 * Domine suas ferramentas
 
@@ -33,7 +46,6 @@ You need to be able to manipulate text as effortlessly as possible,
 because text is the basic raw material of programming.
 #+end_quote
 —Pragmatic Programmer
-
 
 * Frames, Windows & Buffers
 
@@ -74,15 +86,36 @@ because text is the basic raw material of programming.
 
 * Showtime
 
++ ~C-f~ Forward (pra frente)
++ ~C-b~ Backword (pra trás)
++ ~C-n~ Next (pra próxima)
++ ~C-p~ Previous (pra anterior)
+
++ ~C-a~ Inicio da linha (~a~ primeira letra do alfabeto)
++ ~C-e~ Fim da linha (~e~ End)
+
++ ~M-<~ Início do buffer
++ ~M->~ Fim do buffer
+
++ ~M-f~ Forward em palavras
++ ~M-b~ Backword em palavras
+- ~M-e~ End em setenças
+- ~M-a~ Início de sentenças  
+    
 ** org-mode
 
- + Headings & sub-headings
+ * Metadados
+   + ~#+title~
+   + ~#+author~
+   + ~#+date~
+ 
+ * Headings & sub-headings
 
- + Listas
+ * Listas
 
- + Tabelas
+ * Tabelas
 
- + Blocos de código 
+ * Blocos de código 
    #+begin_src emacs-lisp
   (print "Hello, World!")
 #+end_src
@@ -97,10 +130,11 @@ Primeiras edições no =init.el=.
   (scroll-bar-mode -1)
   (global-display-line-numbers-mode t)
   (load-theme 'wombat t)
+  (global-hl-line-mode t)
   (setq inhibit-startup-message t)
 
   (set-face-attribute 'default nil :family "JetBrains Mono" :height 120 :weight 'light)
-
+  
   (require 'package)
   (add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/") t)
   (package-initialize)
@@ -147,7 +181,7 @@ Modo que adiciona funcionalidades do Git.
   (use-package magit
     :ensure t)
   #+end_src
-
+  
 ** treemacs
 
 Modo responsável por exibir a estrutura de diretórios.
